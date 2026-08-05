@@ -1,59 +1,38 @@
-# OFX Transaction Processor
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/Tkinter-0B5394?style=for-the-badge&logo=python&logoColor=white)
 
-This Python script processes OFX (Open Financial Exchange) files to extract financial transactions, categorize them based on predefined keywords, and generate a summarized report of expenses by category, as well as a detailed CSV export of all transactions.
+# OFX — Processador de Transações OFX
 
-## Features
+> Leitor de arquivos **OFX** (Open Financial Exchange) com categorização automática de despesas e exportação para CSV.
 
--   **OFX File Parsing**: Automatically reads and parses OFX files from a specified directory.
--   **Transaction Categorization**: Categorizes transactions into predefined categories (e.g., 'Transporte', 'Alimentação', 'Casa', 'Roupas', 'Lazer', 'Saúde', 'Educação', 'Trabalho', 'Viagem', 'Serviços', 'Investimentos') based on keywords found in transaction descriptions.
--   **Expense Summary**: Provides a clear summary of total expenses for each category.
--   **CSV Export**: Generates a CSV file (`transacoes.csv`) containing all processed transactions with their date, amount, description, and assigned category.
+## 📌 Sobre o Projeto
 
-## Requirements
+Aplicação desktop que lê e processa extratos bancários no formato OFX, extrai as transações, categoriza automaticamente os gastos por palavras-chave e gera um resumo de despesas por categoria, além de um arquivo CSV completo.
 
--   Python 3.x
--   `ofxparse` library
+## ✨ Funcionalidades
 
-To install the required library, run:
+- 📂 **Leitura de OFX**: parsing automático de arquivos OFX com seleção via interface
+- 🗂️ **Categorização automática**: categorias como Transporte, Alimentação, Casa, Roupas, Lazer, Saúde, Educação, Trabalho, Viagem, Serviços e Investimentos
+- 📊 **Resumo de despesas**: total por categoria em uma visão clara
+- 📤 **Exportação CSV**: gera `transacoes.csv` com data, valor, descrição e categoria
+
+## 🚀 Como Executar
 
 ```bash
+# instalar dependências
 pip install ofxparse
+
+# executar a aplicação
+python codigo.py
 ```
 
-## How to Use
-
-1.  **Place your OFX files**: Put all your `.ofx` files in a directory named `ofx_files` in the same directory as the `codigo.py` script.
-2.  **Run the script**: Execute the Python script from your terminal:
-
-    ```bash
-    python codigo.py
-    ```
-
-## Output
-
-The script will generate two main outputs:
-
-1.  **Console Output**: A summary of expenses per category will be printed to the console.
-2.  **`transacoes.csv`**: A CSV file will be created in the script's directory, containing all transactions with the following columns: `Data`, `Valor`, `Descrição`, `Categoria`.
-
-## Example
-
-Assuming you have `ofx_files/my_bank_statement.ofx`, running the script will produce output similar to this:
+## 📁 Estrutura do Projeto
 
 ```
-Processando arquivos OFX...
-
-Resumo de Despesas por Categoria:
---------------------------------
-Alimentação: R$ -500.00
-Transporte: R$ -150.00
-Casa: R$ -300.00
-Lazer: R$ -200.00
-Saúde: R$ -100.00
---------------------------------
-Total Geral: R$ -1250.00
-
-Transações exportadas para transacoes.csv
+├── codigo.py    → Aplicação principal
+└── README.md
 ```
 
-And a `transacoes.csv` file with your categorized transactions.
+## 📄 Licença
+
+Projeto desenvolvido para fins de portfólio.
